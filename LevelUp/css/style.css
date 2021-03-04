@@ -700,8 +700,16 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 
 .order__timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 80px;
-  text-align: center;
   margin: 15px 0;
   font-size: 50px;
   color: gold;
@@ -710,7 +718,6 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 
 .order__row {
-  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -874,6 +881,7 @@ input[type=number] {
   }
 
   .order__timer {
+    height: calc(50px + (80 - 50) * ((100vw - 320px) / (1920 - 320)));
     font-size: calc(25px + (50 - 25) * ((100vw - 320px) / (1920 - 320)));
   }
 }
